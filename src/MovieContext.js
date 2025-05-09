@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 
-//inittiating the context,
+//initiating the context,
 export const MovieContext = createContext();
 
 export const MovieProvider = (props) => {
@@ -24,7 +24,9 @@ export const MovieProvider = (props) => {
 
   return (
     //MovieProvider's job is to hold information and pass it down to the different components below {children} <Nav/> <MovieList/>
-    <MovieContext.Provider value={'Hello'}>{props.children}</MovieContext.Provider>
+    // <MovieContext.Provider value={'Transfer the data'}>{props.children}</MovieContext.Provider>
+    <MovieContext.Provider value={[movies, setMovies]}>{props.children}</MovieContext.Provider>
+
   );
 };
 
